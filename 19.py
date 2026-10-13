@@ -1,0 +1,25 @@
+def ejemplo_ingreso_manual():
+    print("=== LLENADO DE MATRIZ 3x4 ===")
+    matriz = []
+
+    # 1. Llenado de la matriz
+    for f in range(3):
+        fila_temporal = []  # Creamos una nueva fila vacía
+        for c in range(4):
+            valor = input(f"Ingrese palabra en posición [{f+1},{c+1}]: ")
+            fila_temporal.append(valor)
+
+        # Agregamos la fila completa a la matriz principal
+        matriz.append(fila_temporal)
+
+    # 2. Impresión de la matriz
+    print("\n--- Resultado ---")
+    for f in range(3):
+        for c in range(4):
+            # end="\t" tabula el texto para que parezca una cuadrícula
+            print(f"{matriz[f][c]}\t", end="")
+        print()  # Salto de línea al terminar la fila
+
+
+if __name__ == "__main__":
+    ejemplo_ingreso_manual()
